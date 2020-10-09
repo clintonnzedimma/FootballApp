@@ -8,6 +8,7 @@ const {
 } = require("./fetch");
 
 
+
 // Get live fixture for today's date
 exports.getFixturesForToday = async (req, res) => {
 
@@ -91,9 +92,9 @@ exports.getOddsForToday = async (req, res) => {
 };
 
 
-
 // Get a list of Available countries
 exports.getCountries = async (req, res) => {
+
    try {
       res.json({
          countries
@@ -119,7 +120,6 @@ exports.getLeaguesByCountry = async (req, res) => {
    });
    res.status(200).json(leagues);
 };
-
 
 
 /**
@@ -148,7 +148,6 @@ exports.getFixturesFromLeagueId = async (req, res) => {
    }
 
 };
-
 
 
 /**
@@ -241,25 +240,3 @@ const getLeagues = async (country) => {
       console.error(error);
    }
 }
-
-
-
-// Get odds by league id
-exports.getOddsByLeagueId = async (req, res) => {
-
-
-}
-
-
-//Get Odds for today
-exports.getOddsForToday = async (req, res) => {
-
-
-}
-
-// Get Fixtures for Today
-exports.getFixturesForToday = async (req, res) => {
-
-
-}
-
